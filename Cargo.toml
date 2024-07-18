@@ -9,8 +9,8 @@ license = "MIT"
 build = "build.rs"
 
 [dependencies]
-clap = "4.5.1"
+clap = "4.5.9"
 sha2 = "0.11.0-pre.3"
 md5 = "0.7.0"
 sha1 = "0.11.0-pre.3"
-crc32fast = "1.4.0"
+crc32fast = "1.4.2"

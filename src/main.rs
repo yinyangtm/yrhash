@@ -48,8 +48,10 @@ fn main() {
         compare_files(file1, file2);
     } else if let Some(matches) = matches.subcommand_matches("-i") {
         let file = matches.get_one::<String>("file").unwrap();
-        let hash_string = matches.get_one::<String>("string").unwrap();
-        compare_file_hash(file, hash_string);
+        let hash_string = matches.get_one::<String>("string").unwrap().to_lowercase();
+        compare_file_hash(file, &hash_string);
+    } else {
+        eprintln!("No command specified. Use -h for help.");
     }
 }
 
